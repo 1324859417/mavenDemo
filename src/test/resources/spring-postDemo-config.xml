@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	
+	<bean id="common" class="util.Common" />
+	<bean id="httpOperate" class="util.httpOperate" />
+	<bean id="md5encrypt" class="util.md5Encrypt" />
+	<bean id="postModel" class="javainterface.demo.PostMmodel">
+		<property name="appKey" value="wutong"></property>
+		<property name="appSecret" value="ac4506870baa483482665d975b75d00f"></property>
+		<property name="format" value="json"></property>
+		<property name="version" value="1.0"></property>
+		<property name="code1" value="866"></property>
+		<property name="siteId" value="86233a4d"></property>
+		<property name="packNumber" value="3"></property>
+		<property name="extCode" value="345"></property>
+	</bean>
+</beans>

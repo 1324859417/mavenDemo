@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+	<bean id="deviceInfo" class="appium.demo.DeviceInfo" >
+		<property name="url" value="http://127.0.0.1:4723/wd/hub" ></property>
+		<!-- 启动的设备名称，可在appium的手机配置中查看 -->
+		<property name="deviceName" value="127.0.0.1:62001"></property>
+		<!-- 使用的自动化引擎：appium、selendroid  默认为appium -->
+		<property name="automationName" value="Appium"></property>
+		<!-- 启动的移动平台：ios、android、FirefoxOS -->
+		<property name="platformName" value="Android"></property>
+		<!-- 启动的移动平台的版本，可在appium的手机配置中查看 -->
+		<property name="platformVersion" value="4.4.2"></property>
+	</bean>
+	<bean id="appInfo" class="appium.demo.AppInfo" >
+		<!-- 待测app的入口activity名称 -->
+		<property name="appActivity" value=""></property>
+		<!-- 待测app的jar包 -->
+		<property name="appPackage" value=""></property>
+		<!-- 待安装app路径，安装apk时使用 -->
+		<property name="app" value="D:\\QQPhoneManager\\Application\\duoduoCalculator.apk"></property>
+		<!-- 每次启动时覆盖session，否则第二次后运行会报错不能新建session -->
+		<property name="sessionOverride" value=""></property>
+		<!-- 设置键盘：支持中文输入 -->
+		<property name="unicodeKeyboard" value=""></property>
+		<!-- 设置默认键盘为appium的键盘，必须两条都配置 -->
+		<property name="resetKeyboard" value=""></property>
+	</bean>
+
+</beans>
